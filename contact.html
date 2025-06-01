@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | 5M Events</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <script src="contact.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="C:\Users\venka\Desktop\jaideep\photos\Fifth Media-01.png" alt="5M Media Logo" />
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#" class="active">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="menuToggle">&#9776;</div>
+  </nav>
+  <div class="video-container">
+    <video autoplay muted loop playsinline>
+      <source src="https://media.istockphoto.com/id/696130006/video/falling-rose-petals-pink-background.mp4?s=mp4-640x640-is&k=20&c=bkeFzWKmcoFuhllcNblzz-wBC4tApBKflr9fRAPnqjs=" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="overlay"></div>
+  </div>
+
+
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <div class="contact-header">
+        <h2>Contact 5M Events</h2>
+        <p>We’d love to hear from you. Fill in the form below to get started.</p>
+      </div>
+
+      <div class="contact-info">
+        <div class="info-left">
+          <strong>Our Office</strong>
+          <p>3rd Floor, Plot no 169, Gnana Residency , 
+            Roadno 13, Doctors Colony, Kavuri hills, 
+            Madhapur, Hyderabad, Telangana 500081</p>
+          <p><strong>Phone:</strong> 9010351111</p>
+          <p><strong>Email:</strong> info@fi5thmedia.com</p>
+        </div>
+        <div class="info-right">
+          <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.415396701168!2d78.40195177411686!3d17.439151501311487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91056a18070d%3A0x2a170fa865c707f7!2sFi5th%20Media%20Productions!5e0!3m2!1sen!2sin!4v1716889601459!5m2!1sen!2sin" ></iframe>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h3>Send us a message</h3>
+        <form action="submitt.html" method="POST" onsubmit="storeFormData()">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email ID" required />
+          <input type="tel" name="contact" placeholder="Your Contact Number" pattern="[0-9]{10}" required />
+          
+          <label for="eventType">Type of Event</label>
+          <select id="eventType" name="eventType" required>
+            <option value="">-- Select an Event Type --</option>
+            <option value="corporate">Corporate Event</option>
+            <option value="marriage">Marriage Event</option>
+            <option value="Movie Launches">Movie Launches</option>
+            <option value="Private">Private Parties</option>
+          </select>
+        
+          <input type="text" name="guest" placeholder="Expected Guests" />
+          <textarea name="message" placeholder="Type your message here" required></textarea>
+          <button class="submit-btn" type="submit">Submit</button>
+        </form>
+        
+        <script>
+          function storeFormData() {
+            const formElements = document.forms[0].elements;
+            localStorage.setItem("formData", JSON.stringify({
+              name: formElements.name.value,
+              email: formElements.email.value,
+              contact: formElements.contact.value,
+              eventType: formElements.eventType.value,
+              guest: formElements.guest.value,
+              message: formElements.message.value,
+            }));
+          }
+          // Simple toggle for menu
+const toggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+toggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+        </script>
+        
+      </div>
+    </div>
+  </section>
+
+
+
+  <div class="insta-feed-section">
+    <div class="insta-header">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" class="insta-icon">
+      <span class="insta-handle">@5MEVENTS</span>
+    </div>
+    
+    <div class="insta-grid">
+      <a href="https://www.instagram.com/fifthmedia_5m/" target="_blank" class="insta-box">
+        <img src="https://assets.architecturaldigest.in/photos/60084785f93542952b665b66/master/w_1600%2Cc_limit/virat-kohli-anushka-sharma-wedding-anniversary61.jpg" alt="Post 1">
+      </a>
+  
+      <a href="https://www.instagram.com/fifthmedia_5m/" target="_blank" class="insta-box insta-video">
+        <img src="C:\Users\venka\Desktop\jaideep\photos\IMG_3432.jpg" alt="Post 2"><span class="video-icon">▶</span>
+      </a>
+  
+      <a href="https://www.instagram.com/fifthmedia_5m/" target="_blank" class="insta-box">
+        <img src="C:\Users\venka\Desktop\jaideep\photos\IMG_3433.jpg" alt="Post 3">
+      </a>
+  
+      <a href="https://www.instagram.com/fifthmedia_5m/" target="_blank" class="insta-box insta-video">
+        <img src="https://www.dipakstudios.com/gallery/14594121173.jpeg" alt="Post 4"><span class="video-icon">▶</span>
+      </a>
+  
+      <a href="https://www.instagram.com/fifthmedia_5m/" target="_blank" class="insta-box">
+        <img src="https://cdn.siasat.com/wp-content/uploads/2023/02/kiara-sid.jpg" alt="Post 5">
+      </a>
+  
+      <a href="https://www.instagram.com/fifthmedia_5m/" target="_blank" class="insta-box">
+        <img src="C:\Users\venka\Desktop\jaideep\photos\0H0A7270.jpg" alt="Post 6">
+      </a>
+    </div>
+  </div>
+  
+
+
+
+
+  <footer class="footer">
+  <div class="footer-top">
+    <div class="footer-section">
+      <h4>SHOP</h4>
+      <ul>
+        <li><a href="#">Drinks</a></li>
+        <li><a href="#">Gift Cards</a></li>
+        <li><a href="#">Store Locator</a></li>
+        <li><a href="#">Refer a Friend</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>HELP</h4>
+      <ul>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>ABOUT</h4>
+      <ul>
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#">OLIPOP Digest</a></li>
+        <li><a href="#">Ingredients</a></li>
+        <li><a href="#">Digestive Health</a></li>
+        <li><a href="#">Wholesale</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-subscribe">
+      <p>Sign up to get 10% off your first order</p>
+      <form>
+        <input type="email" placeholder="Your Email Address" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="footer-socials">
+        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Instagram" /></a>
+        <a href="#"><img src="https://pixelbag.net/wp-content/uploads/2022/02/facebook-logo-700x700.jpg" alt="Facebook" /></a>
+        <a href="#"><img src="https://icon-library.com/images/youtube-icon-svg/youtube-icon-svg-23.jpg" alt="Twitter" /></a>
+        <a href="#"><img src="https://tse4.mm.bing.net/th?id=OIP.Cn9SAHCmTy8MEaixr8bqpAHaHa&pid=Api&P=0&h=180" alt="LinkedIn" /></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 YourCompany, Inc. All Rights Reserved</p>
+    <div class="footer-links">
+      <a href="#">Terms of Service</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Do Not Sell My Information</a>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

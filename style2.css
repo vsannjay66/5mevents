@@ -1,0 +1,460 @@
+/* Reset & base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: #673a3a;
+    padding-top: 100px; /* To offset fixed navbar */
+    
+    /*background-image: url('https://wallpapercrafter.com/th800/26353-daisy-flower-petals-field-4k.jpg');*/
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    
+  }
+  .logo img {
+    height: 100px;
+    
+  }
+  .nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+  }
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  .nav-links li a:hover,
+  .nav-links li a.active {
+    color: #f6b86d;
+  }
+  .menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    margin: 80px auto;
+    max-width: 1000px;
+    padding: 20px;
+  }
+  
+  .contact-container {
+    background-color: #c39b9b;
+    background-image: url('https://www.pngall.com/wp-content/uploads/5/Rose-Petals-PNG-Free-Download.png');
+    
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(235, 140, 113, 0.508);
+    padding: 40px;
+  }
+  
+  .contact-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .contact-header h2 {
+    font-size: 28px;
+    font-weight: 600;
+  }
+  
+  .contact-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  
+  .info-left {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .info-left strong,
+  .info-left p {
+    margin-bottom: 10px;
+  }
+  
+  .info-right iframe {
+    border: 0;
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+  }
+  
+  /* Form Section */
+  .form-section {
+    text-align: center;
+  }
+  
+  .form-section h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  input, textarea {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: #e91e63;
+    box-shadow: 0 0 8px rgba(233, 30, 99, 0.3);
+    outline: none;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  select, label {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+  }
+  
+  
+  .submit-btn {
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #939191;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #eba4e5;
+    transform: translateY(-2px);
+  }
+  
+  .footer {
+  background-color: #123c34;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  padding: 40px 20px;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1 1 180px;
+  margin: 10px 0;
+}
+
+.footer-section h4 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  color: #eee;
+  text-decoration: none;
+  display: block;
+  margin: 6px 0;
+}
+
+.footer-subscribe {
+  flex: 1 1 280px;
+  margin-top: 10px;
+}
+
+.footer-subscribe p {
+  margin-bottom: 10px;
+}
+
+.footer-subscribe form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-subscribe input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  width: 60%;
+}
+
+.footer-subscribe button {
+  background-color: #f5c518;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.footer-socials a {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.footer-socials img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid #444;
+  margin-top: 30px;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: #ccc;
+  text-decoration: none;
+}
+
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background: #0b1d3a;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    .nav-links.active {
+      display: flex;
+    }
+    .menu-toggle {
+      display: block;
+    }
+
+      
+   
+    .contact-info {
+      flex-direction: column;
+    }
+  
+    
+    form {
+      width: 100%;
+    }
+  }
+  
+  .insta-feed-section {
+    margin: 60px auto;
+    max-width: 1000px;
+    text-align: center;
+  }
+  
+  .insta-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .insta-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .insta-handle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #efe8e8;
+  }
+  
+  
+  .insta-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .insta-feed-section {
+    margin: 60px auto;
+    max-width: 1000px;
+    text-align: center;
+  }
+  
+  .insta-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .insta-icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .insta-handle {
+    font-size: 40px;
+    font-weight: 600;
+    color: #efe8e8;
+  }
+  
+  
+  .insta-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .insta-grid:hover{
+    box-shadow: #ccc 0px 0px 10px;
+  }
+  
+  .insta-box {
+    width: 30%;
+    min-width: 250px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+  }
+  .insta-box :hover{
+    box-shadow: #fd0707 0px 20px 10px;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+
+.insta-handle:hover{
+  box-shadow: #ccc 0px 0px 10px;
+}
+  
+  .insta-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+  }
+  
+  .insta-box:hover img {
+    transform: scale(1.05);
+    box-shadow: #fd0707 0px 20px 10px;
+  }
+
+  
+  
+  .video-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 18px;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  
+  @media (max-width: 768px) {
+    .insta-box {
+      width: 48%;
+    }
+    
+  }
+  
+  @media (max-width: 480px) {
+    .insta-box {
+      width: 100%;
+    }
+    
+
+  }
+  
+  /* Background Video Container */
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%) blur(3px);
+}
+
+/* Optional: Light translucent overlay for better contrast */
+.video-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1); /* Very light white overlay */
+  backdrop-filter: blur(2px);
+}
+
+
+
+

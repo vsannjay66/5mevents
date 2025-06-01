@@ -1,0 +1,198 @@
+/* Reset & base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: #673a3a;
+    padding-top: 100px; /* To offset fixed navbar */
+    
+    /*background-image: url('https://wallpapercrafter.com/th800/26353-daisy-flower-petals-field-4k.jpg');*/
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    height: auto;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    
+  }
+  .logo img {
+    height: 80px;
+    
+  }
+  .nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+  }
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  .nav-links li a:hover,
+  .nav-links li a.active {
+    color: #f6b86d;
+  }
+  .menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* Default Styles */
+  .video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    overflow: hidden;
+  }
+  
+  .video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%) blur(3px);
+  }
+  
+  /* Optional: Light translucent overlay for better contrast */
+  .video-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1); /* Very light white overlay */
+    backdrop-filter: blur(2px);
+  }
+  
+  
+  
+  .section {
+    padding: 3rem 2rem;
+    width: 100%;
+    background-color: rgba(245, 244, 243, 0.6); /* translucent background */
+    box-sizing: border-box;
+    backdrop-filter: blur(6px); /* subtle blur effect */
+  }
+  
+  .section.light {
+    background-color: rgba(255, 239, 203, 0.6);
+    backdrop-filter: blur(6px);
+  }
+  
+  .section:hover {
+    background-color: rgba(246, 227, 186, 0.7);
+  }
+  
+  .services-container {
+    width: 100%;
+    text-align: center;
+    padding: 3rem 2rem;
+    background: rgba(246, 227, 186, 0.4); /* semi-transparent */
+    box-sizing: border-box;
+    backdrop-filter: blur(6px);
+  }
+  
+  .services-title {
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 1rem;
+  }
+  
+  .services-description {
+    font-size: 1.1rem;
+    color: #262626;
+    margin-bottom: 2rem;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  .service-box {
+    background-color: rgba(255, 255, 255, 0.5); /* translucent white */
+    border: 1px solid rgba(240, 231, 226, 0.7);
+    padding: 2rem;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    backdrop-filter: blur(5px);
+  }
+  
+  .service-box:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.7); /* lighter on hover */
+    font-weight: bolder;
+    color: black;
+    box-shadow: 0 4px 10px rgba(161, 133, 18, 0.7);
+  }
+  
+  .service-box h3 {
+    color: #ff5f15;
+    margin-bottom: 0.5rem;
+  }
+  
+  .service-box p {
+    color: #3d3d3d;
+    font-size: 0.95rem;
+  }
+  
+  .service-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0b1d3a;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 15px;
+        border-radius: 8px;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+  }
+  
+  @media (max-width: 480px) {
+    .services-title {
+      font-size: 2rem;
+    }
+  
+    .services-description {
+      font-size: 1rem;
+    }
+  
+    .service-box {
+      padding: 1.5rem;
+    }
+  }
+  

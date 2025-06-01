@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Confirmation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff8ec;
+      color: #f6f5f5;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-top: 40px;
+      color: #000000;
+    }
+
+    .details-box {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 30px;
+  background: #651a1a; /* Solid background color */
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  line-height: 1.7;
+  transition: background 0.5s ease-in-out;
+}
+
+.details-box:hover {
+  animation: none; /* Disable animation on hover */
+  background: #651a1a; /* Keep same solid background on hover */
+}
+
+@keyframes rainbowShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+    .details-box p {
+      margin: 10px 0;
+    }
+
+    .details-box strong {
+      color: #ffffff;
+    }
+
+    .confirmation-footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 20px 50px;
+    }
+
+    .logo-animated {
+      text-align: center;
+      animation: stamp3D 5s infinite ease-in-out;
+      transform-origin: center;
+      perspective: 800px;
+    }
+
+    .logo-animated img {
+      width: 160px;
+      height: auto;
+      transform-style: preserve-3d;
+    }
+
+    .stamp-date {
+      font-size: 1rem;
+      color: #222;
+      
+      font-weight: bold;
+    }
+
+    @keyframes stamp3D {
+      0% {
+        transform: rotateY(0deg) rotateX(0deg) scale(1);
+        filter: drop-shadow(0 0 0px #ffa500);
+      }
+      25% {
+        transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+        filter: drop-shadow(0 0 10px #ffae42);
+      }
+      50% {
+        transform: rotateY(-10deg) rotateX(-10deg) scale(1.1);
+        filter: drop-shadow(0 0 20px #ff9900);
+      }
+      75% {
+        transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+        filter: drop-shadow(0 0 10px #ffae42);
+      }
+      100% {
+        transform: rotateY(0deg) rotateX(0deg) scale(1);
+        filter: drop-shadow(0 0 0px #ffa500);
+      }
+    }
+
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .details-box {
+        padding: 20px;
+        margin: 20px;
+      }
+
+      .logo-animated img {
+        width: 120px;
+      }
+
+      .stamp-date {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Thank You for Contacting Us!</h1>
+  <div class="details-box" id="userDetails"></div>
+
+  <div class="confirmation-footer">
+    <div class="logo-animated">
+      <img src="C:\Users\venka\Desktop\jaideep\photos\Fifth Media-01.png" alt="5M Events Logo" />
+      <div class="stamp-date" id="currentDate"></div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const data = JSON.parse(localStorage.getItem("formData"));
+      if (data) {
+        document.getElementById("userDetails").innerHTML = `
+          <p><strong>Name:</strong> ${data.name}</p>
+          <p><strong>Email:</strong> ${data.email}</p>
+          <p><strong>Contact:</strong> ${data.contact}</p>
+          <p><strong>Event Type:</strong> ${data.eventType}</p>
+          <p><strong>Expected Guests:</strong> ${data.guest}</p>
+          <p><strong>Message:</strong> ${data.message}</p>
+        `;
+      }
+
+      const dateElement = document.getElementById("currentDate");
+      const today = new Date();
+      const formatted = today.toLocaleDateString("en-GB", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric"
+      });
+      dateElement.textContent = formatted;
+    });
+  </script>
+</body>
+</html>
