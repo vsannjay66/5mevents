@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>5M Events - Home</title>
+  <link rel="stylesheet" href="style1.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">
+    <img src="C:\Users\venka\Desktop\jaideep\photos\Fifth Media-01.png" alt="5M Media Logo" />
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Gallery</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <div class="menu-toggle" id="menuToggle">&#9776;</div>
+</nav>
+
+<!-- Hero Section with Video Background -->
+<section class="video-section">
+  <video autoplay muted loop id="myVideo">
+    <source src="photos/InShot_20250530_125747053.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="video-overlay"></div>
+  <div class="content">
+    <h1>Welcome to 5M Events</h1>
+    <p>Crafting unforgettable experiences with creativity and passion.</p>
+  </div>
+</section>
+
+
+  <!-- Services Section -->
+  <section class="services-section">
+    <h2 class="services-title">What We Offer</h2>
+    <div class="services-boxes-horizontal">
+
+      <div class="service-box">
+        <h3>Wedding Events</h3>
+        <p>Celebrate love with grand traditions, elegant decor, and unforgettable memories.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>Corporate Events</h3>
+        <p>Seamlessly executed product launches, conferences, and annual meets. <a href="#">Learn more</a></p>
+      </div>
+
+      <div class="service-box">
+        <h3>Movie Launches</h3>
+        <p>Captivating film promotions that grab attention and buzz. <a href="#">Learn more</a></p>
+      </div>
+
+      <div class="service-box">
+        <h3>Private Parties</h3>
+        <p>Birthdays, anniversaries, or custom VIP setups tailored for your vibe. <a href="#">Learn more</a></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-section">
+        <h4>SHOP</h4>
+        <ul>
+          <li><a href="#">Drinks</a></li>
+          <li><a href="#">Gift Cards</a></li>
+          <li><a href="#">Store Locator</a></li>
+          <li><a href="#">Refer a Friend</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>HELP</h4>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>ABOUT</h4>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">OLIPOP Digest</a></li>
+          <li><a href="#">Ingredients</a></li>
+          <li><a href="#">Digestive Health</a></li>
+          <li><a href="#">Wholesale</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-subscribe">
+        <p>Sign up to get 10% off your first order</p>
+        <form>
+          <input type="email" placeholder="Your Email Address" required />
+          <button type="submit">Subscribe</button>
+        </form>
+        <div class="footer-socials">
+          <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Instagram" /></a>
+          <a href="#"><img src="https://pixelbag.net/wp-content/uploads/2022/02/facebook-logo-700x700.jpg" alt="Facebook" /></a>
+          <a href="#"><img src="https://icon-library.com/images/youtube-icon-svg/youtube-icon-svg-23.jpg" alt="Twitter" /></a>
+          <a href="#"><img src="https://tse4.mm.bing.net/th?id=OIP.Cn9SAHCmTy8MEaixr8bqpAHaHa&pid=Api&P=0&h=180" alt="LinkedIn" /></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 YourCompany, Inc. All Rights Reserved</p>
+      <div class="footer-links">
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Do Not Sell My Information</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // Simple toggle for menu
+    const toggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
