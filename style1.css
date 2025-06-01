@@ -1,0 +1,428 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px 15px;
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent over video */
+}
+
+.logo img {
+  height: 100px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #ffd700;
+}
+
+.video-section .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  color: #fff;
+  text-align: center;
+  padding: 0 20px;
+}
+
+
+
+/* Default Styles */
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#myVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+  z-index: 2;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  text-align: center;
+  color: #ffffff;
+  width: 80%;
+  max-width: 800px;
+  font-weight: 800 bold;
+  padding: 20px;
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1.3rem;
+  font-family:'italica';
+}
+
+
+
+
+/* Menu toggle for mobile (optional) */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: brown;
+
+}
+
+/* Services */
+.services-section {
+  background:  #ffd574f9;
+  padding: 100px 40px;
+  text-align: center;
+}
+.services-title {
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #062658;
+}
+.services-boxes-horizontal {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+}
+.service-box {
+  background: #f7f2cf;
+  padding: 25px;
+  min-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.service-box:hover {
+  transform: scale(1.05);
+  background-color: #e317cc54;
+  color: #000000;
+  box-shadow: 0 0 30px #755305f9;
+}
+.service-box h3 {
+  color: #000000;
+  margin-bottom: 15px;
+}
+.service-box a {
+  display: inline-block; /* Allows box-shadow to take effect */
+  padding: 10px 20px;    /* Optional: adds clickable area */
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit; /* Keeps inherited color unless styled */
+  
+}
+
+
+
+/* Footer */
+.footer {
+  background:  #d1ab51f9;
+  color: #000000;
+  font-family: 'Poppins', sans-serif;
+  padding: 40px 20px;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1 1 180px;
+  margin: 10px 0;
+}
+
+.footer-section h4 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+
+}
+
+.footer-section ul li a {
+  color: #000000;
+  text-decoration: none;
+  display: block;
+  margin: 6px 0;
+}
+
+.footer-subscribe {
+  flex: 1 1 280px;
+  margin-top: 10px;
+}
+
+.footer-subscribe p {
+  margin-bottom: 10px;
+}
+
+.footer-subscribe form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-subscribe input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  width: 60%;
+}
+
+.footer-subscribe button {
+  background-color: #f5c518;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.footer-socials a {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.footer-socials img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid #444;
+  margin-top: 30px;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: #000000;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: #000000;
+  text-decoration: none;
+}
+
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .contact-info {
+      flex-direction: column;
+    }
+  
+    .nav-links {
+      display: none;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    form {
+      width: 100%;
+    }
+  }
+  
+  .insta-feed-section {
+    margin: 60px auto;
+    max-width: 1000px;
+    text-align: center;
+  }
+  
+  .insta-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .insta-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .insta-handle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+  }
+  
+  .insta-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .insta-box {
+    width: 30%;
+    min-width: 250px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .insta-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+  }
+  
+  .insta-box:hover img {
+    transform: scale(1.05);
+  }
+/* Responsive */
+/* Large Tablets and Desktops */
+@media (max-width: 1024px) {
+  .content h1 {
+    font-size: 2.5rem;
+  }
+  .content p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .video-section {
+    height: 90vh;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #000;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .content {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .video-section {
+    height: 85vh;
+  }
+
+  .content h1 {
+    font-size: 1.75rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .services-boxes-horizontal {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-box {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .video-section {
+    height: 80vh;
+  }
+
+  .content h1 {
+    font-size: 1.5rem;
+  }
+
+  .content p {
+    font-size: 0.95rem;
+  }
+}
